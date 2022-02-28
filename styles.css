@@ -1,0 +1,71 @@
+body {
+  background: linear-gradient(to bottom, #FDF6F0, #FCD8D4);
+  margin: 0;
+}
+
+main {
+  margin: 20px 10% 0;
+  font-family: "Nunito", sans-serif;
+}
+
+#contact, #projects {
+  margin: 5% auto 5%;
+}
+
+#skills, #code {
+  margin-top: 3rem;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.nav {
+  position: absolute;
+  right: 5%;
+  top: 20px;
+}
+
+.nav-link {
+  color: #000;
+  font-size: 1em;
+  text-decoration: none;
+  transition: color 0.1s linear;
+  margin: 10px;
+}
+
+.nav-link:hover {
+  color: #7842f5;
+}
+
+pre {
+  background-color: #F8F8F8;
+}
+
+hr {
+  border-top-style: dotted;
+  border-width: 5px;
+  width: 3%;
+  border-color: #f2dac3;
+  border-left-style: none;
+  border-bottom-style: none;
+  border-right-style: none;
+}
+
+.image {
+  border: solid;
+  border-color: black;
+  border-width: 2px;
+  float: left;
+  margin-right: 30px
+}
+
+footer {
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background-color: #b4aee8;
+  text-decoration: none;
+}

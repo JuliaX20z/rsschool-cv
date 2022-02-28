@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>CV Julia Frill</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="mew.ico" sizes="64x64">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+
+</head>
+
+  <main>
+      <h1>Julia Frill</h1>
+      <nav>
+              <ul class="nav">
+              
+                <li>  <strong><a class="nav-link" href="#contact">Get in touch!</a></strong></li>
+                <li>  <strong><a class="nav-link" href="#skills">Skills</a></strong></li>
+                <li>  <strong><a class="nav-link" href="#code">Code</a></strong></li>
+                <li>  <strong><a class="nav-link" href="#projects">Education & Projects</a></strong></li>
+              </ul>
+          </nav>
+    <header>
+      <img class="image" src="girl.jpg" alt="Photo" width="300">
+    </header>
+
+    <address id="contact">
+      <strong class="title">Contacts:</strong>
+      <ul>
+        <li>Email: juliafrill2000@gmail.com</li>
+        <li>Discord: @juliafrill#1708</li>
+        <li>Telegram: @astyOOO</li>
+      </ul>
+    </address>
+
+<div class="intro container">
+  <h3>Intro</h3>
+  <p>Hello, my name is Julia, I am just a girl who lives in the south of Chile.</p>
+  <p>My main goal for 2021-2022 is to become a web developer, create a good portfolio and prove to myself that I can achieve this thanks to my perseverance. From birth, I have a tendency to calm mental work, so I tried myself in various areas of
+    programming. I love to learn and usually understand on the fly any new information, therefore, at the moment I am going through the initial stage of the course on web development – in which I’m interested in.</p>
+  <p>When I am not interested in something, it is very difficult for me to force myself to learn something, but when there is interest and a wish to do, I will keep trying until I understand.</p>
+
+</div>
+<br>
+<hr>
+
+<section id="skills">
+
+  <h3>Knowledge and skills</h3>
+
+  <strong>Programming languages</strong>
+  <ul>
+    <li>C – basics</li>
+    <li>JavaScript</li>
+  </ul>
+
+  <strong>Additionally</strong>
+  <ul>
+    <li>Responsive website layout, HTML5, CSS3, as well as basic knowledge of JavaScript/JQuery</li>
+    <li>Git</li>
+    <li>Bootstrap</li>
+    <li>EJS</li>
+  </ul>
+
+  <strong>Languages:</strong>
+  <table>
+    <tr>
+      <td>Russian -</td>
+      <td>native speaker</td>
+    </tr>
+
+    <tr>
+      <td>Spanish -</td>
+      <td>native speaker</td>
+    </tr>
+
+    <tr>
+      <td>English -</td>
+      <td>level B1-B2</td>
+    </tr>
+
+  </table>
+<br>
+<b class="title">Education -</b>
+<span class="education-text">Incomplete secondary general education. “Examenes Libres” (state correspondence examinations). Independent education.</span>
+
+</section>
+
+<section id="code">
+  <h3>Code time</h3>
+  <b>Eratosthenes task solution in C</b>
+<pre>
+<code>
+<img src="c.png" alt="Code of the solution">
+  </code>
+  </pre>
+
+<b>Kata. The Western Suburbs Croquet Club solution in JS</b><br>
+<a href="https://www.codewars.com/kata/5502c9e7b3216ec63c0001aa">Categorize New Member Kata</a>
+<pre>
+<code>
+<img src="senior.png" alt="Code of the solution in JavaScript">
+
+</code>
+</pre>
+
+<b>Basics of NodeJS, Express and EJS package. My server</b>
+
+<pre>
+  <code>
+
+    const express = require("express");
+    const bodyParser = require("body-parser");
+    const date = require(__dirname + "/date.js")
+    const app = express();
+
+    let items = ["Buy Food", "Eat Food", "Cook Food"];
+    let workItems = [];
+
+    app.set('view engine', "ejs");
+
+    app.use(bodyParser.urlencoded({ extended: true }));
+
+    app.use(express.static("public"))
+
+    app.get("/", function (req, res) {
+
+    let day = date.getDate();
+
+      res.render("list", {listTitle: day, newListItems: items });
+    });
+
+    app.post("/", function (req, res) {
+      let item = req.body.newItem;
+      if (req.body.button === "Work"){
+        workItems.push(item);
+        res.redirect("/work");
+      } else {
+        items.push(item);
+        res.redirect("/");
+      }
+    });
+
+    app.get("/work", function(req, res){
+      res.render("list", {listTitle: "Work list", newListItems: workItems});
+    });
+
+    app.post("/work", function(req, res){
+      let item = req.body.newItem;
+      workItems.push(item);
+      res.redirect("/work");
+    });
+
+    app.get("/about", function(req, res){
+      res.render("about");
+    });
+
+    app.listen(3000, function () {
+      console.log("Server started on port 3000.");
+    });
+
+  </code>
+</pre>
+
+</section>
+
+<section id="projects">
+  <h3>Education and Projects</h3>
+<p>Before the course in RS school i have passed <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/">The Complete Web Development Bootcamp</a> course on Udemy.
+</p>
+<p>And also a year ago I was studying about C by completing <a href="https://stepik.org/course/3078/syllabus">this course (Основы программирования на C)</a> on <a href="https://welcome.stepik.org/en">Stepik</a>, after which I solved problems and watched videos on YouTube.
+</p>
+<p>You can see my other works in my <a href="https://drive.google.com/drive/folders/1w43h4gGjeHzQq87v4BO6In5JNgMoHpnb?usp=sharing">Portfio on Google Drive</a>.</p>
+</section>
+
+  </main>
+
+  <footer>
+    <details>
+      <summary>😊</summary>
+      <img src="https://www.araioflight.com/wp-content/uploads/2019/05/Thank-You-different-world-languages-world.jpg" alt="Thank you!">
+    </details>
+    <br>
+      <time datetime="2021-07-25">July 25</time>
+    <p>© Julia Frill 2021</p>
+  </footer>
+
+</html>
